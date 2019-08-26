@@ -76,7 +76,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <div class="w3-white">
       <div class="w3-dark-grey" style="height:28px;width:95%"></div>
     </div>
-    <p class="w3-wide">React Js (Front End)</p>
+    <p class="w3-wide">React Js (Front End) </p>
     <div class="w3-white">
       <div class="w3-dark-grey" style="height:28px;width:75%"></div>
     </div>
