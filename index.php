@@ -69,16 +69,32 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <h2 class="w3-text-light-grey">Toyin Emmanuel Adesina</h2>
     <hr style="width:80%" class="w3-opacity">
     <p>I'm a tech enthusiastic, a self taught Web developer, designer with interest in solar energy harnessing, Internet of Things (IoT) and Artificial Intelligence (AI). A graduate of Physics from the University of Ilorin, Ilorin Nigeria.
-          I have a strong passion for problem solving through the use of modern technology. I'm a PHP (Codeigniter) Developer
+          I have a strong passion for problem solving through the use of modern technology. I'm a Front End (React) Developer.
     </p>
     <h3 class="w3-padding-16 w3-text-light-grey">My Skills</h3>
-    <p class="w3-wide">Web Development</p>
+    <p class="w3-wide">Responsive Web Development</p>
     <div class="w3-white">
       <div class="w3-dark-grey" style="height:28px;width:95%"></div>
     </div>
-    <p class="w3-wide">Solar Inverter Installation</p>
+    <p class="w3-wide">React Js (Front End)</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:75%"></div>
+    </div>
+    <p class="w3-wide">Redux (State Management)</p>
     <div class="w3-white">
       <div class="w3-dark-grey" style="height:28px;width:65%"></div>
+    </div>
+    <p class="w3-wide">Code Igniter (Back End)</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:70%"></div>
+    </div>
+    <p class="w3-wide">Vanilla Javascript</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:70%"></div>
+    </div>
+    <p class="w3-wide">LESS</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:60%"></div>
     </div>
     <p class="w3-wide">Photoshop</p>
     <div class="w3-white">
