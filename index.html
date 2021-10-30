@@ -4,16 +4,22 @@
         <link rel="stylesheet" href="styles.css">
         <script src="js/jquery.js"></script>
         <script src="js/script.js"></script>
+        <script src="js/particles_mini.js"></script>
+        <script src="js/particle.js"></script>
+        <!-- <script src="js/canvas.js"></script> -->
     </head>
     <body>
         <div class="view">
-            <div class="home">
+            <div id="particles-js" class="home">
                 <div class="title">
                     <h1 style=" font-size: 38px;">Hello, I'm <span class="active">Toyin Adesina.</span><br/>
                         I'm a full-stack web developer.
                     </h1>
                     <div class="button">
-                        View My Work
+                        <span>
+                            View My Work
+                        </span>
+                        <span class="arrow">&#8594;</span>
                     </div>
                 </div>
             </div>
@@ -26,19 +32,21 @@
                     <a href="#contact"><span class="menu">Contact</span></a>
                 </div>
             </div>
-            <div id="#about" class="">
+            <div id="about" class="">
                 <div class="heading">
-                    <h1>About</h1>
-                    <div class="line"></div>
+                    <h1 id="aboutHead" class="js-scroll">About</h1>
+                    <div class="line js-scroll"></div>
                 </div>
-                <div class="appear-div">
+                <div id="appear-div" class="appear-div">
                     <div class="js-scroll" style="background-color: blue; width: 230px; height: 230px;"></div><br>
                     <div class="js-scroll" style="background-color: blue; width: 230px; height: 230px;"></div><br>
-                    <div class="js-scrol" style="background-color: blue; width: 230px; height: 230px;"></div>
+                    <div class="js-scroll" style="background-color: blue; width: 230px; height: 230px;"></div>
                 </div>
                 <div>thehheth heheh eheheh</div>
             </div>
         </div>
-        
+        <!-- <canvas class="background"></canvas> -->
+        <script src="js/particles_mini.js"></script>
+        <script src="js/particle.js"></script>
     </body>
 </html>
