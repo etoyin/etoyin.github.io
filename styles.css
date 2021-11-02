@@ -55,6 +55,7 @@ view{
   top: 0;
   width: 100%;
   transition: position 13s;
+  z-index: 3;
 }
 
 .navbar a {
@@ -107,4 +108,43 @@ view{
 .arrow{
   font-size: 30px;
   /* width: 300px; */
+}
+.flex-container{
+  display: flex;
+  flex-wrap: wrap;
+  /* background-color: DodgerBlue; */
+  justify-content: center;
+  margin-top: 20px;
+}
+.flex-container > div{
+  background-color: #f1f1f1;
+  width: 250px;
+  height: 350px;
+  margin: 5px;
+  text-align: center;
+  /* line-height: 75px; */
+  padding: 25px;
+  color: #404042;
+}
+.qualities-icon{
+  border: 3px solid dodgerblue;
+  padding: 10px;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  border-radius: 50%;
+}
+.qualities-icon > img{
+  width: 60px;
+  height: 60px;
+  position: relative;
+  top: 20px;
+}
+.qualities-content > h6{
+  font-size: 20px;
+  line-height: 50px;
+}
+.qualities-content > p{
+  line-height: 25px;
+  text-align: justify;
 }
