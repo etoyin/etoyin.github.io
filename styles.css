@@ -24,7 +24,7 @@ view{
   margin: auto;
   text-align: center;
   position: absolute;
-  top: 40vh;
+  top: 30vh;
   /* background-color: blue; */
 }
 .active{
@@ -38,12 +38,17 @@ view{
   width: 200px;
   margin-right: auto; 
   margin-left: auto; 
-  padding: 10px;
+  padding: 0px 10px 10px 10px;
 }
 .button:hover{
   background-color: #3f85ec;
+  cursor: pointer;
 }
-.navbar.fixed{
+.navbar_and_line{
+  width: 100%;
+  z-index: 3;
+}
+.navbar_and_line.fixed{
   position: fixed;
   top: 0;
 }
@@ -55,7 +60,6 @@ view{
   top: 0;
   width: 100%;
   transition: position 13s;
-  z-index: 3;
 }
 
 .navbar a {
@@ -71,6 +75,11 @@ view{
 .navbar a:hover {
   background: #ddd;
   color: black;
+}
+
+.navLine{
+  height: 4px;
+  background-color: dodgerblue;
 }
 
 .pad-everything{
@@ -117,7 +126,7 @@ view{
   margin-top: 20px;
 }
 .flex-container > div{
-  background-color: #f1f1f1;
+  /* background-color: #f1f1f1; */
   width: 250px;
   height: 350px;
   margin: 5px;
@@ -147,4 +156,69 @@ view{
 .qualities-content > p{
   line-height: 25px;
   text-align: justify;
+}
+
+.flex-container-2{
+  display: flex;
+  flex-wrap: wrap;
+  /* background-color: DodgerBlue; */
+  justify-content: center;
+  /* margin-top: 20px; */
+}
+.flex-container-2 > div{
+  /* background-color: #f1f1f1; */
+  width: 550px;
+  height: 550px;
+  margin: 30px;
+  text-align: center;
+  /* line-height: 75px; */
+  padding: 25px;
+  color: #404042;
+}
+.avatar{
+  width: 60%;
+  height: 300px;
+  /* border: 1px solid black; */
+  margin: auto;
+  padding: 10px;
+}
+.myImgDiv > div >img {
+  height: 100%;
+}
+.avatar-content{
+  width: 60%;
+  /* border: 1px solid black; */
+  margin: auto;
+  padding: 10px;
+}
+.avatar-content > h6{
+  font-size: 20px;
+  line-height: 50px;
+}
+.avatar-content > p{
+  line-height: 25px;
+  text-align: justify;
+}
+a, a:hover{
+  text-decoration: none;
+}
+.chart{
+  height: 40px;
+  background-color: #e5e6e3;
+  width: 100%;
+  margin-bottom: 17px;
+  
+}
+.titleChart{
+ height: 40px;
+ background-color: #197de2;
+}
+.barChart{
+  height: 30px;
+  background-color: #1e90ff;
+  width: 100px;
+  text-align: center;
+  color: #f2f2f2;
+  font-weight: bold;
+  padding-top: 10px;
 }

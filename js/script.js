@@ -17,7 +17,7 @@ $(document).ready(function(){
     $(window).on('scroll', function(){
         let scrollTop     = $(window).scrollTop(),
             elementOffset = $('#appear-div').offset().top,
-            navbarOffset = $('.navbar').offset().top,
+            navbarOffset = $('.navbar_and_line').offset().top,
             pageHeight = $(window).height(),
             distance      = (elementOffset - scrollTop);
             navbarDistanceToTop = navbarOffset - scrollTop
@@ -27,10 +27,10 @@ $(document).ready(function(){
                 console.log(distance)
             }
             if(scrollTop > pageHeight){
-                $(".navbar").addClass("fixed")
+                $(".navbar_and_line").addClass("fixed")
                 $("#about").css("padding-top","120px")
             }else{
-                $(".navbar").removeClass("fixed");
+                $(".navbar_and_line").removeClass("fixed");
                 $("#about").css("padding-top","0px");
             }
     })
