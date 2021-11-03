@@ -168,7 +168,7 @@ view{
 .flex-container-2 > div{
   /* background-color: #f1f1f1; */
   width: 550px;
-  height: 550px;
+  height: fit-content;
   margin: 30px;
   text-align: center;
   /* line-height: 75px; */
@@ -204,7 +204,7 @@ a, a:hover{
 }
 .chart{
   height: 40px;
-  background-color: #e5e6e3;
+  background-color: #bec0bc;
   width: 100%;
   margin-bottom: 17px;
   
@@ -216,9 +216,41 @@ a, a:hover{
 .barChart{
   height: 30px;
   background-color: #1e90ff;
-  width: 100px;
+  width: 10vw;
   text-align: center;
   color: #f2f2f2;
+  /* font-size: 1.5vw; */
   font-weight: bold;
   padding-top: 10px;
+}
+
+.projects{
+  background-color: #f2f2f2;
+  padding: 15px;
+}
+
+/* .card-box{} */
+
+.flex-container-3{
+  display: flex;
+  flex-wrap: wrap;
+  /* background-color: DodgerBlue; */
+  justify-content: center;
+  /* margin-top: 20px; */
+}
+.flex-container-3 > div{
+  background-color: #fff;
+  width: 450px;
+  height: 200px;
+  /* margin: 30px; */
+  text-align: center;
+  /* line-height: 75px; */
+  padding: 25px;
+  color: #404042;
+}
+.card-box{
+  /* background-position: center; */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat, repeat; /* Do not repeat the image */
+  background-size: contain;
 }
