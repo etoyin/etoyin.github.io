@@ -2,7 +2,7 @@ let portfolio = [
     {
         "name": "voiceout.png",
         "title": "Voice Out Site",
-        "description": "A site about the voiceout of the used and oppressed being heard!",
+        "description": "A site to voiceout the used and oppressed!",
         "type": "Full Stack",
         "url": "https://voiceout.netlify.app/"
     },
@@ -42,11 +42,26 @@ let portfolio = [
 $(document).ready(function(){
     for(let i=0; i<portfolio.length; i++){
         $(".portfolio-boxes").append(`
-            <div class="card-box" style="background-image:url('images/${portfolio[i].name}');" data-link="https://....">
+            <div class="card-box js-scroll" style="background-image:url('images/${portfolio[i].name}');" data-link="https://....">
+                <div class='overlay-card'>
+                    <div style="padding: 50px">
+                        <p>${portfolio[i].description}</p>
+                        <br/>
+                        <a target="_blank" href="${portfolio[i].url}">Find Out More</a>
+                    </div>
+                </div>
             </div>
         `)
     }    
-    
+    $(".portfolio-boxes").find(".card-box").each(function(i,e){
+        $(this).mouseover(function(){
+            // alert($(this).text());
+            $(this).find(".overlay-card").css("display", "block")
+        })
+        $(this).mouseout(function(){
+            $(this).find(".overlay-card").css("display", "none")
+        })
+    })
     $(".button").mouseover(function(){
         // $(".arrow").html("&#8595;");
         $(".arrow").html("&#8595;");
