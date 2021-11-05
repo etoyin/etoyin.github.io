@@ -86,10 +86,21 @@ $(document).ready(function(){
             navbarDistanceToTop = navbarOffset - scrollTop;
 
             $('.appear-div').each(function(i, each){
+                
                 elementOffset = $(this).offset().top;
                 distance = (elementOffset - scrollTop);
                 if(distance < pageHeight){
                     $(this).find(".js-scroll").addClass("scrolled");
+
+                    let data = $(this).attr("data");
+                    $(".pad-everything").find(".menu").each(function(){
+                    if(data == $(this).attr("data")){
+                        $(this).addClass("active")
+                    }
+                    else{
+                        $(this).removeClass("active")
+                    }
+                })
                 }
             })
             // if(distance < pageHeight){

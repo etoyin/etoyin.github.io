@@ -73,8 +73,8 @@ view{
 }
 
 .navbar a:hover {
-  background: #ddd;
-  color: black;
+  background: #1d2d43;
+  color: #fd7704;
 }
 
 .navLine{
@@ -227,6 +227,9 @@ a, a:hover{
 
 .projects{
   background-color: #f2f2f2;
+  padding: 15px;
+}
+.blog{
   padding: 15px;
 }
 

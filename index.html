@@ -27,17 +27,17 @@
             <div class="navbar_and_line">
                 <div class="navbar">
                     <div class="pad-everything">
-                        <a href="#home"><span class="menu active">Home</span></a>
-                        <a href="#about"><span class="menu">About</span></a>
-                        <a href="#projects"><span class="menu">Portfolio</span></a>
-                        <a href="#blog"><span class="menu">Blog</span></a>
-                        <a href="#contact"><span class="menu">Contact</span></a>
+                        <a href="#home"><span class="menu active" data="home">Home</span></a>
+                        <a href="#about"><span class="menu" data="about">About</span></a>
+                        <a href="#projects"><span class="menu" data="portfolio">Portfolio</span></a>
+                        <a href="#blog"><span class="menu" data="blog">Blog</span></a>
+                        <a href="#contact"><span class="menu" data="contact">Contact</span></a>
                     </div>
                 </div>
                 <div class="navLine"></div>
             </div>
             <div id="about" class="">
-                <div class="heading appear-div ">
+                <div data="about" class="heading appear-div ">
                     <h1 id="aboutHead" class="js-scroll">About</h1>
                     <div class="line js-scroll"></div>
                 </div>
@@ -79,7 +79,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="flex-container-2 appear-div ">
+                <div data="about" class="flex-container-2 appear-div ">
                     <div class="myImgDiv js-scroll">
                         <div class="avatar">
                             <img src="images/Toyin-mirror.jpg" title="Adesina Oluwatoyin" alt="Adesina Toyin Picture">
@@ -140,11 +140,11 @@
                     </div>             
                 </div>
                 <div id="projects" class="portfolio projects">
-                    <div class="heading appear-div">
+                    <div data="portfolio" class="heading appear-div">
                         <h1 id="aboutHead" class="js-scroll">Projects</h1>
                         <div class="line js-scroll"></div>
                     </div>
-                    <div class="flex-container-3 appear-div portfolio-boxes">
+                    <div data="portfolio" class="flex-container-3 appear-div portfolio-boxes">
                         <!-- <div class="card-box" data-link="https://....">
                             <img src="" alt="">
                         </div> -->
@@ -152,30 +152,30 @@
                 </div>
 
                 <div class="blog" id="blog">
-                    <div class="heading appear-div">
+                    <div data="blog" class="heading appear-div">
                         <h1 id="aboutHead" class="js-scroll">Blog</h1>
                         <div class="line js-scroll"></div>
                     </div>
-                    <div class="heading">
-                        <div style="text-align: center; font-size: 40px;" class="">
+                    <div data="blog" class="appear-div heading ">
+                        <div style="text-align: center; font-size: 40px; margin-bottom: 250px;" class="js-scroll">
                             BLOG COMING SOON!!!
                         </div>
                     </div>
                 </div>
 
                 <div class="contact" id="contact">
-                    <div class="heading-contact appear-div">
+                    <div data="contact" class="heading-contact appear-div">
                         <h1 id="aboutHead" class="js-scroll">CONTACT</h1>
                         <div class="line-contact js-scroll"></div>
                     </div>
-                    <p >You want us to work together or you have a question?</p>
-                    <div class="inputs clear-fix">
-                        <div style="margin: auto;">
+                    <p class="js-scroll">You want us to work together or you have a question?</p>
+                    <div data="contact" class="appear-div inputs clear-fix">
+                        <div class="js-scroll" style="margin: auto;">
                             <input type="text" placeholder="name"/><br/>
                             <input type="text" placeholder="email"/><br/>
                             <textarea name="" placeholder="Message" id="" rows="10"></textarea>
                         </div>
-                        <div class="submit" type="submit">Submit</div>
+                        <div class="submit js-scroll" type="submit">Submit</div>
                     </div>
                 </div>
                 <div>
