@@ -348,5 +348,15 @@ input{
 }
 .social-div{
   background-color: rgb(13, 13, 37);
-  padding: 30px;
+  padding: 100px;
+}
+
+.social{
+  width: 300px;
+  margin: auto;
+  /* background-color: #f2f2f2; */
+  text-align: center;
+}
+.social>span{
+  margin-right: 10px;
 }
