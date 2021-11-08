@@ -40,6 +40,21 @@ let portfolio = [
 
 
 $(document).ready(function(){
+    $(".clickables").on('click', function(){
+        $(".clickables").removeClass("animate")
+        $(".open").css("display", "block")
+        $(".close").css("display", "none")
+    })
+    $(".open").on('click', function(){
+        $(this).css("display", "none");
+        $(".close").css("display", "block")
+        $(".clickables").addClass("animate")
+    })
+    $(".close").on('click', function(){
+        $(this).css("display", "none");
+        $(".open").css("display", "block")
+        $(".clickables").removeClass("animate")
+    })
     for(let i=0; i<portfolio.length; i++){
         $(".portfolio-boxes").append(`
             <div class="card-box js-scroll" style="background-image:url('images/${portfolio[i].name}');" data-link="https://....">
@@ -110,6 +125,8 @@ $(document).ready(function(){
             // }
             if(scrollTop > pageHeight){
                 $(".navbar_and_line").addClass("fixed")
+                $(".navbar_and_line").css("width", "100%")
+                
                 $("#about").css("padding-top","120px")
             }else{
                 $(".navbar_and_line").removeClass("fixed");
