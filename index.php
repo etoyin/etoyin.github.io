@@ -1,3 +1,55 @@
+<?php 
+if(isset($_POST['submit'])){
+    $to = "toyinadesina2015@gmail.com"; // this is your Email address
+    $from = $_POST['email']; // this is the sender's Email address
+    $name = $_POST['name'];
+    $subject = "Form submission: From My Website";
+    $subject2 = "Copy of your form submission from Adesina Toyin portfolio site";
+    $message = `
+                <html>
+                    <head>
+                        <title>$subject</title>
+                    </head>
+                    <body>
+                        <p>`.$name . " wrote the following:" . "\n\n" .$_POST['message'].`</p>
+                    </body>
+                </html>
+                `;
+    $message2 = `
+                <html>
+                    <head>
+                        <title>$subject2</title>
+                    </head>
+                    <body>
+                        <p>Here is a copy of your message ` . $name . "\n\n" . $_POST['message'].`</p>
+                    </body>
+                </html>
+                `;
+
+    $headers[] = 'MIME-Version: 1.0';
+    $headers[] = 'Content-type: text/html; charset=iso-8859-1';
+
+    // Additional headers
+    $headers[] = 'To: Toyin <toyinadesina2015@gmail.com>';
+    $headers[] = 'From:'.$name. ' '.$from;
+
+    $headers2[] = 'MIME-Version: 1.0';
+    $headers2[] = 'Content-type: text/html; charset=iso-8859-1';
+
+    // Additional headers
+    $headers2[] = 'To: Toyin <toyinadesina2015@gmail.com>';
+    $headers2[] = 'From:'.$name. ' '.$to;
+
+    // $headers = "From:" . $from;
+    // $headers2 = "From:" . $to;
+    mail($to,$subject,$message,implode("\r\n", $headers));
+    //mail($from,$subject2,$message2,implode("\r\n", $headers2)); // sends a copy of the message to the sender
+    echo "Mail Sent. Thank you " . $name . ", we will contact you shortly.";
+    // You can also use header('Location: thank_you.php'); to redirect to another page.
+    // You cannot use header and echo together. It's one or the other.
+    }
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -185,12 +237,15 @@
                     </div>
                     <p class="js-scrol">You want us to work together or you have a question?</p>
                     <div data="contact" class="appear-div inputs clear-fix">
-                        <form class="js-scroll form" style="margin: auto;">
-                            <input type="text" placeholder="name"/><br/>
-                            <input type="text" placeholder="email"/><br/>
-                            <textarea name="" placeholder="Message" id="" rows="10"></textarea>
+                        <form action="index.php" method="post" class="js-scroll form" style="margin: auto;">
+                            <input type="text" name="name" placeholder="name"/><br/>
+                            <input type="text" name="email" placeholder="email"/><br/>
+                            <textarea name="message" placeholder="Message" id="" rows="10"></textarea>
+                            <div class="submit js-scroll" type="submit">
+                                <input type="submit" name="submit" value="Submit">
+                            </div>
                         </form>
-                        <div class="submit js-scroll" type="submit">Submit</div>
+                        
                     </div>
                     <div class="goUp">
                         <!-- <span class="arrow fas">&#xf102;</span> -->
