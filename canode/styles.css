@@ -536,3 +536,80 @@ iframe{
 		width: 100%;
 	}
 }
+
+
+
+@media only screen and (max-height: 500px) {
+	.firstCarouselDiv{
+		position: absolute;
+		top: -320px;
+		left: -50px;
+	}
+	.thirdCarouselDiv{
+	  position: absolute;
+	  top: -350px;
+	  width: 100%;
+	  /* left: -100px;
+	  text-align: left; */
+	}	
+}
+
+@media only screen and (max-height: 400px) {
+	.firstCarouselDiv{
+		position: absolute;
+		top: -250px;
+		left: -50px;
+	}
+	.thirdCarouselDiv{
+	  position: absolute;
+	  top: -250px;
+	  width: 100%;
+	}
+	.firstCarouselDiv > h1, .thirdCarouselDiv > h1{
+		font-size: 1rem;
+	}
+	.firstCarouselDiv > div > p, .thirdCarouselDiv > div > p{
+		font-size: 0.5rem;
+	}
+}
+
+@media only screen and (max-height: 300px) {
+	.firstCarouselDiv{
+		position: absolute;
+		top: -150px;
+		left: -50px;
+	}
+	.thirdCarouselDiv{
+	  position: absolute;
+	  top: -150px;
+	  width: 100%;
+	}
+	.firstCarouselDiv > h1, .thirdCarouselDiv > h1{
+		font-size: 1rem;
+	}
+	.firstCarouselDiv > div > p, .thirdCarouselDiv > div > p{
+		font-size: 0.5rem;
+	}
+	.firstCarouselDiv > button{
+		margin: 5px 10px 0 0;
+		width: 100px;
+		height: 40px;
+		font-size: 0.6rem;
+	}
+
+	.headerLine{
+		margin-top: 10px !important;
+		margin-bottom: 10px !important;
+	}
+	
+	.img-b2-1{
+		margin-top: -15px !important;
+		width: 300px;
+	}
+	/* #navBar{
+		height: 60px;
+	} */
+	.logo{
+		width: 200px;
+	}
+}
