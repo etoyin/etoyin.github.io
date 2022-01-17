@@ -1,31 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
 /* ======================================================================================================== */
-.carousel-inner img {
+.carousel-inner > div > img {
 	/* position: relative;
 	top: 0;
 	left: 0; */
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
   }
   .absolute-div{
 	  /* background: rgb(61, 60, 60, 0.4 ); */
 	  position: absolute;
 	  top: 0;
 	  left: 0;
+	  /* background-color: blanchedalmond; */
 	  width: 100%;
 	  height: 100%;
 	  z-index: 5;
   }
   .firstCarouselDiv{
 	  position: absolute;
-	  top: -480px;
+	  top: -400px;
 	  left: -100px;
 	  text-align: left;
+	  width: 100%;
   }
   .thirdCarouselDiv{
 	position: absolute;
-	top: -500px;
+	top: -450px;
 	width: 100%;
 	/* left: -100px;
 	text-align: left; */
@@ -48,11 +50,12 @@
 	  /* font-stretch: extra-expanded; */
   }
   .img-b2-1{
-	  width: 500px !important;
+	  width: 500px;
   }
 /* ======================================================================================================== */
 body {
-	margin: 0;
+	margin: 0 !important;
+	padding: 0 !important;
 	/* font-family: cursive; */
 	font-family: 'Montserrat', sans-serif;
 }
@@ -60,7 +63,7 @@ body {
 	/* background-image: url('images/banner.jpg'); */
 	background-position: center;
 	height: 100vh;
-	background-color: #f2f2f2;
+	background-color: #000;
 }
 #navBar {
 	padding-left: 70px;
@@ -69,16 +72,16 @@ body {
 	/* color: #555; */
 }
 .lightBg{
-	background-color: #dddada;
+	background-color: #ffffff;
 }
 #navBar:hover{
-	background-color: #f5f1f1;
+	background-color: #ffffff;
 	cursor: pointer;
-	/* color: black; */
+	color: #2c2b2b
 }
 .nav-link{
 	text-decoration: none;
-	color: silver !important;
+	color: #8f8c8c !important;
 	font-size: 15px;
 	margin-right: 15px;
 	text-transform: uppercase;
@@ -94,7 +97,7 @@ input#search{
 	padding-left: 0;
 }
 input::placeholder, textarea::placeholder{
-	color: #333131  !important;
+	color: #8f8c8c  !important;
 	font-size: 15px !important;
 	font-weight: bold !important;
 	opacity: 1;
@@ -108,7 +111,7 @@ input#search:focus{
 .small-line{
 	height: 2px;
 	width: 100%;
-	background-color: #333131 ;
+	background-color: #8f8c8c;
 }
 .logo{
 	width: 250px;
@@ -218,7 +221,6 @@ input#search:focus{
 	padding: 35px;
 }
 .about-content > p{
-	/* font-weight: 400; */
 	text-align: justify;
 	font-size: 15px;
     line-height: 20px;
@@ -301,6 +303,7 @@ input#search:focus{
 	background-size: 15px 20px;
 	background-position: -19px -19px; */
 }
+
 .flex-container{
 	display: flex;
 	flex-wrap: wrap;
@@ -347,39 +350,62 @@ input#search:focus{
 }
 .contact{
 	padding: 50px 70px 70px;
+	width: 90%;
+	margin: auto;
 }
 .form{
 	margin-bottom: 10px;
 }
 .form > div > input{
-	padding: 15px;
-	border: 1px solid #acafac;
-	background-color: #f2f2f7;
+	padding: 15px 0 15px 10px;
+	border: 1px solid #d3d4d3;
+	background-color: #e8e8e9;
 	width: 100%;
 }
 .form > textarea{
-	margin-left: 10px;
-	padding: 15px;
-	border: 1px solid #acafac;
-	background-color: #f2f2f7;
+	margin-left: 5px;
+	padding: 10px;
+	border: 1px solid #d3d4d3;
+	background-color: #e8e8e9;
 	width: 100%;
 }
 .form > input[type=button]{
 	width: 100%;
-	margin-left: 10px;
+	margin-left: 5px;
 	padding: 15px;
-	font-size: 15px !important;
+	font-size: 12px !important;
 	color: #f2f2f2;
 	background-color: #ec2b2b;
 	border: 1px solid #acafac;
 	font-weight: bold;
 }
 .form > div > input::placeholder, .form > textarea::placeholder{
-	color: #858383 !important;
+	color: #a8a5a5 !important;
+	font-size: 0.8rem !important;
 }
 .form > div{
-	margin-left: 10px;
+	margin-left: 5px;
 	padding: 0;
+}
+
+.flex-container-3{
+	display: flex;
+	flex-wrap: wrap;
+	/* background-color: DodgerBlue; */
+	justify-content: flex-start;
+	margin-top: 20px;
+}
+.flex-container-3 > .inner-flex-box{
+	/* background-color: #fc8585; */
+	width: 190px;
+	/* height: 350px; */
+	margin: 0px;
+	/* text-align: center; */
+	/* line-height: 75px; */
+	color: #404042;
+}
+.inner-flex-box > div{
+	padding: 10px;
 }
 .map{
 	background-color: #f2f2f7;
@@ -392,41 +418,33 @@ iframe{
 .map > .row > div > div > h2 {
 	font-size: 50px;
 }
-.icons{
-	font-size: 18px;
-	padding-top: 30px;
-}
 .withRoundBorder{
 	border: 2px solid rgb(61, 60, 60);
-	margin-left: 15px;
+	/* margin-left: -5px; */
 	border-radius: 50%;
 	padding-top: 10px;
-	padding-left: 15px;
+	padding-left: 10px;
 	height: 50px;
-	width: 50px;
+	width:50px;
 }
-.icons > .col3{
-	border: 2px solid rgb(61, 60, 60);
-	margin-left: 15px;
-	border-radius: 50%;
-	padding-top: 10px;
-	padding-left: 12px;
-	height: 50px;
-	/* width: 150px; */
+.withRoundBorder > span{
+	font-size: 1.5rem;
 }
 .display-4{
 	font-weight: 500;
 }
 .icon-title{
-	line-height: 15px; 
+	line-height: .5rem; 
 	color: #bdb9b9;
+	font-size: 1rem;
 }
 .icon-body{
-	font-size: 15px;
+	font-size: 1rem;
 }
 .vertLine{
-	margin-top: 30px;
-	background-color: #919494;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background-color: #b0b3b3;
 	width: 1px;
 }
 .map-horizontal-line{
@@ -434,6 +452,25 @@ iframe{
 }
 
 @media only screen and (max-width: 768px) {
+	.about{
+		padding-left: 20px !important;
+	}
+	.navbar-nav{
+		padding-left: 20px !important;
+	}
+	.firstCarouselDiv{
+		left: -20px;
+		/* width: 80%; */
+	}
+	.firstCarouselDiv > h1, .thirdCarouselDiv > h2{
+		font-size: 1.5rem;
+	}
+	.img-b2-1{
+		width: 100%;
+	}
+	.navbar-toggler{
+		color: #ffffff !important;
+	}
 	.title{
 		width: 100%;
 		/* background-color: aqua; */
