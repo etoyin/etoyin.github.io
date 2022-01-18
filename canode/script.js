@@ -11,7 +11,7 @@ $(document).ready(function(){
       phone = $('#phone'),
       country = $('#country'),
       company = $('#company'),
-      loader = $(".loader");
+      loader = $(".loader"),
       submit = $("#submit");
       
   submit.on('click', function(e) {
@@ -28,20 +28,14 @@ $(document).ready(function(){
       formData.append("country", country.val());
       formData.append("company", company.val());
       formData.append("email", email.val());
+      console.log(formData);
 
-      (async () => {
-        const rawResponse = await fetch('post2email.php', {
+      fetch('post2email.php', {
           method: 'POST',
-          headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(formData)
-        });
-        const content = await rawResponse.json();
-      
-        console.log(content);
-      })();
+          body: formData
+      })
+      .then((res) => res.json())
+      .then((res) => console.log(res))
     }
   });
   
