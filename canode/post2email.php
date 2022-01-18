@@ -1,6 +1,6 @@
 <?php
  
-if($_POST) {
+if(isset($_POST["email"])) {
   $to = "toyinadesina2015@gmail.com"; // your mail here
   $email = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
   $fname = filter_var($_POST["fname"], FILTER_SANITIZE_STRING);
@@ -22,6 +22,7 @@ if($_POST) {
     die($output);
   } else {
     $output = json_encode(array('success' => false));
+    echo($message);
     die($output);
   }
 }

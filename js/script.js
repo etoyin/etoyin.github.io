@@ -1,5 +1,12 @@
 let portfolio = [
     {
+        "name": "canode1.png",
+        "title": "Canode Energy",
+        "description": "An Energy Company Site",
+        "type": "Front End",
+        "url": "/canode"
+    },
+    {
         "name": "voiceout.png",
         "title": "Voice Out Site",
         "description": "A site to voiceout the used and oppressed!",
