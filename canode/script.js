@@ -1,9 +1,89 @@
-document.addEventListener("DOMContentLoaded", function(){
-  
-}); 
-// alert("kfkfkkf")
 
 $(document).ready(function(){
+
+
+  ////////////////////////////////////////////Submit form/////////////////////////////////////////
+
+  var email = $('#email'),
+      fname = $('#fname'),
+      lname = $('#lname'),
+      message = $('#message'),
+      phone = $('#phone'),
+      country = $('#country'),
+      company = $('#company'),
+      loader = $(".loader");
+      submit = $("#submit");
+      
+  submit.on('click', function(e) {
+    // loader.css("display", "block");
+    // $("#navBar").removeClass("fixed-top");
+    e.preventDefault();
+    if(validate()) {
+
+      var formData = new FormData();
+      formData.append("fname", fname.val());
+      formData.append("lname", lname.val());
+      formData.append("phone", phone.val());
+      formData.append("message", message.val());
+      formData.append("country", country.val());
+      formData.append("company", company.val());
+      formData.append("email", email.val());
+
+      (async () => {
+        const rawResponse = await fetch('post2email.php', {
+          method: 'POST',
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(formData)
+        });
+        const content = await rawResponse.json();
+      
+        console.log(content);
+      })();
+    }
+  });
+  
+  function validate() {
+    var valid = true;
+    var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    
+    if(!regex.test(email.val())) {
+      email.css('border-color', 'red');
+      valid = false;
+    }
+    if($.trim(fname.val()) === "") {
+      fname.css('border-color', 'red');
+      valid = false;
+    }
+    if($.trim(phone.val()) === "") {
+      phone.css('border-color', 'red');
+      valid = false;
+    }
+    if($.trim(email.val()) === "") {
+      email.css('border-color', 'red');
+      valid = false;
+    }
+    if($.trim(message.val()) === "") {
+      message.css('border-color', 'red');
+      valid = false;
+    }
+    
+    return valid;
+  }
+
+
+
+
+
+
+
+  /*-------------------------------------------------------------------------------------------*/
+
+
+
+
 
   let height, width;
 
