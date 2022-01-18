@@ -4,6 +4,27 @@ document.addEventListener("DOMContentLoaded", function(){
 // alert("kfkfkkf")
 
 $(document).ready(function(){
+
+  let height, width;
+
+  $(window).on('resize', function(){
+    height = $(window).height();
+    width = $(window).width();
+    //var win = $(this); //this = window
+    if (width <= 820 && height > width) {
+      $(".carouselImg1").attr("src", "images/b4m.jpg");
+      $(".carouselImg2").attr("src", "images/b2m.jpg");
+      $(".carouselImg3").attr("src", "images/b3m.jpg");
+      // var k = $(".carouselImg").attr("src");
+      // alert(k + width + " "+ height);
+    }
+    else{
+      $(".carouselImg1").attr("src", "images/b1.jpg");
+      $(".carouselImg2").attr("src", "images/b2.jpg");
+      $(".carouselImg3").attr("src", "images/b3.jpg");
+    }
+  });
+
   $("#navBar").mouseenter(function(){
     $(this).addClass("navbar-light")
     $(this).removeClass("navbar-dark")

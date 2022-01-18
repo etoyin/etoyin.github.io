@@ -460,7 +460,11 @@ iframe{
 	}
 	.firstCarouselDiv{
 		left: -20px;
+		top: -350px;
 		/* width: 80%; */
+	}
+	.thirdCarouselDiv{
+		top: -400px;
 	}
 	.firstCarouselDiv > h1, .thirdCarouselDiv > h2{
 		font-size: 1.5rem;
