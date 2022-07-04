@@ -4,7 +4,7 @@ let portfolio = [
         "title": "Canode Energy",
         "description": "An Energy Company Site",
         "type": "Front End",
-        "url": "/canode"
+        "url": "https://etoyin.github.io/canode"
     },
     {
         "name": "voiceout.png",
