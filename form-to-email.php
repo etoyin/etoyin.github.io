@@ -6,7 +6,7 @@ if(!isset($_POST['submit']))
 }
 $name = $_POST['name'];
 $visitor_email = $_POST['email'];
-$subject = $_POST['subject'];
+// $subject = $_POST['subject'];
 $message = $_POST['message'];
 
 //Validate first
@@ -23,7 +23,7 @@ if(IsInjected($visitor_email))
 }
 
 $email_from = 'toyinadesina60@gmail.com';//<== update the email address
-$email_subject = $subject ."(New Form submission from Your Web Page)";
+$email_subject = "(New Form submission from Your Web Page)";
 $email_body = "You have received a new message from the user $name.\n".
     "Here is the message:\n $message".
 
@@ -33,7 +33,9 @@ $headers .= "Reply-To: $visitor_email \r\n";
 //Send the email!
 mail($to, $email_subject, $email_body, $headers);
 //done. redirect to thank-you page.
-header('Location: thank-you.php');
+// header('Location: thank-you.php');
+
+echo("success");
 
 
 // Function to validate against any email injection attempts

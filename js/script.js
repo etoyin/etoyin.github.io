@@ -100,13 +100,23 @@ $(document).ready(function(){
         // alert("ijijiji")
     })
     $("#form").on('click', function(){
-        alert("nooooooooo")
+        // alert("nooooooooo")
         let name = $("#name").val()
         let email = $("#email").val()
         let message = $("#message").val()
 
         if(name.length > 1 && email.length > 1 && message.length > 1){
-            alert('kllll')
+            // alert('kllll')
+            let formData = new FormData();
+            formData.append("name", name)
+            formData.append("email", email)
+            formData.append("message", message)
+            fetch("./form-to-email.php", {
+                method:'POST',
+                body: formData
+            })
+            .then(res => res.json())
+            .then(res => console.log(res))
         }else{
             alert("nooooooooo")
         }
