@@ -100,6 +100,7 @@ $(document).ready(function(){
         // alert("ijijiji")
     })
     $("#form").on('click', function(){
+        alert("nooooooooo")
         let name = $("#name").val()
         let email = $("#email").val()
         let message = $("#message").val()
