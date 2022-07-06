@@ -99,6 +99,17 @@ $(document).ready(function(){
         window.location.href = "#about"
         // alert("ijijiji")
     })
+    $("#form").on('click', function(){
+        let name = $("#name").val()
+        let email = $("#email").val()
+        let message = $("#message").val()
+
+        if(name.length > 1 && email.length > 1 && message.length > 1){
+            alert('kllll')
+        }else{
+            alert("nooooooooo")
+        }
+    });
     $(window).on('scroll', function(){
         let scrollTop     = $(window).scrollTop(),
             elementOffset, //= $('.appear-div').offset().top,
