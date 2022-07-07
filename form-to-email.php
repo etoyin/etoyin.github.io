@@ -30,12 +30,21 @@ $email_body = "You have received a new message from the user $name.\n".
 $to = "toyinadesina60@gmail.com";//<== update the email address
 $headers = "From: $email_from \r\n";
 $headers .= "Reply-To: $visitor_email \r\n";
+$headers .= "MIME-Version: 1.0\r\n";
+$headers .= "Content-type: text/html\r\n";
 //Send the email!
-mail($to, $email_subject, $email_body, $headers);
+$ref = mail($to, $email_subject, $email_body, $headers);
 //done. redirect to thank-you page.
 // header('Location: thank-you.php');
 
-echo("success");
+if($ref){
+  $message->success = true;
+  
+}else{
+  $message->success = false;
+}
+
+echo json_encode($message);
 
 
 // Function to validate against any email injection attempts
