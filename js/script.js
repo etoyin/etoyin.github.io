@@ -115,7 +115,7 @@ $(document).ready(function(){
                 method:'POST',
                 body: formData
             })
-            // .then(res => res.json())
+            .then(res => res.json())
             .then(res => console.log(res))
         }else{
             alert("nooooooooo")
